@@ -1,5 +1,5 @@
 class Grindstone::Post < ActiveRecord::Base
-  belongs_to :author
+  belongs_to :grindstone_author
 
   rails_admin do
   end
