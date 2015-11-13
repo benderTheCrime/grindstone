@@ -2,7 +2,7 @@
 
     <% @posts.each do |post| %>
       <h2><%= post.title %></h2>
-      <h5><% puts post.author %></h5>
+      <h3><%= post.author.name %></h3>
       <i><%= post.created_at %></i>
       <div><%= post.body %></div>
       <%= link_to 'Show', post %>

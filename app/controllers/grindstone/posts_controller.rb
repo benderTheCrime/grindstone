@@ -10,7 +10,6 @@ class Grindstone::PostsController < ApplicationController
 
   # GET /posts/1
   def show
-    puts @post['author']
   end
 
   private

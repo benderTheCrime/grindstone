@@ -2,7 +2,9 @@ PATH
   remote: .
   specs:
     grindstone (0.0.1)
+      devise (= 3.5.2)
       rails (~> 4.2.4)
+      rails_admin (= 0.7.0)
 
 GEM
   remote: https://rubygems.org/
@@ -164,7 +166,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  devise (= 3.5.2)
   grindstone!
   rails_admin (= 0.7.0)
   sqlite3
