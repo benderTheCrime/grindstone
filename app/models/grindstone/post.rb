@@ -3,7 +3,4 @@ class Grindstone::Post < ActiveRecord::Base
     :class_name => 'Grindstone::Author',
     :primary_key => 'id',
     :foreign_key => 'grindstone_author_id'
-
-  rails_admin do
-  end
 end

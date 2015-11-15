@@ -1,1 +1,1 @@
-# require 'cancancan'
+require 'rails_admin'
