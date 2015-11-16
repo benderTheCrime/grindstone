@@ -14,3 +14,10 @@ Configure the Grindstone routes:
 ```
 mount Grindstone::Engine => "/grindstone"
 ```
+
+You must also run the Rails Admin installation generator:
+```
+Run rails g rails_admin:install
+```
+
+Admin is up to you
