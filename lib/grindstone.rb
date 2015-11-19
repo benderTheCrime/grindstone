@@ -5,7 +5,7 @@ module Grindstone
     attr_accessor :blog_title
   end
 
-  @grindstone_config = nil
+
   def self.config
     unless @grindstone_config
       @grindstone_config = Config.new
@@ -14,4 +14,7 @@ module Grindstone
     yield @grindstone_config if block_given?
     @grindstone_config
   end
+
+  private
+  @grindstone_config = nil
 end
