@@ -2,7 +2,7 @@
 <html>
     <head></head>
     <body>
-        <h1><%= config.grindstone && config.grindstone['title'] ? config.grindstone['title'] : 'Listing Posts' %></h1>
+        <h1><%= Grindstone.config.blog_title %></h1>
         <% @posts.each do |post| %>
             <h2><%= post.title %></h2>
             <h3><%= post.grindstone_author.name %></h3>

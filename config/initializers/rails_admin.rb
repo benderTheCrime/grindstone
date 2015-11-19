@@ -1,2 +1,2 @@
-# RailsAdmin.config do |config|
-# end
+RailsAdmin.config do |config|
+end

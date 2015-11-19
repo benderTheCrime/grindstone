@@ -1,4 +1,17 @@
-require "grindstone/engine"
+require 'grindstone/engine'
 
 module Grindstone
+  class Config
+    attr_accessor :blog_title
+  end
+
+  @grindstone_config = nil
+  def self.config
+    unless @grindstone_config
+      @grindstone_config = Config.new
+    end
+
+    yield @grindstone_config if block_given?
+    @grindstone_config
+  end
 end
