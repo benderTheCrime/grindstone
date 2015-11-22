@@ -2,9 +2,8 @@ require 'grindstone/engine'
 
 module Grindstone
   class Config
-    attr_accessor :blog_title
+    attr_accessor :blog_title, :blog_description, :blog_footer
   end
-
 
   def self.config
     unless @grindstone_config

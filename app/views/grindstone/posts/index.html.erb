@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <%= render "grindstone/posts/partials/head" %>
+    </head>
     <body>
         <h1><%= Grindstone.config.blog_title %></h1>
+        <h4><%= Grindstone.config.blog_description %></h4>
         <% @posts.each do |post| %>
             <h2><%= post.title %></h2>
             <h3><%= post.grindstone_author.name %></h3>
@@ -10,5 +13,6 @@
             <div><%= post.body %></div>
             <%= link_to 'Show', post %>
         <% end %>
+        <footer><%= Grindstone.config.blog_footer %></footer>
     </body>
 </html>

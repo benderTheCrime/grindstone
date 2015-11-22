@@ -1,6 +1,5 @@
 class Grindstone::PostsController < ApplicationController
   before_action :set_post, only: [:show]
-
   POST = Grindstone::Post
 
   # GET /posts

@@ -19,8 +19,8 @@ module Grindstone
         'db/migrate/20090106022023_create_authors.rb'
       template '20090106022024_create_posts.erb',
         'db/migrate/20090106022023_create_posts.rb'
-      template '20090106022025_add_authors_foreign_key_to_posts.erb',
-        'db/migrate/20090106022025_add_authors_foreign_key_to_posts.rb'
+      template '20090106022025_create_comments.erb',
+        'db/migrate/20090106022025_create_comments.rb'
     end
   end
 end
