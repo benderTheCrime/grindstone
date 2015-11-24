@@ -11,5 +11,7 @@
         <div><%= @post.body %></div>
         <%= render "grindstone/posts/partials/comments" %>
         <%= link_to 'Back', posts_path %>
+
+        <footer><%= Grindstone.config.blog_footer %></footer>
     </body>
 </html>

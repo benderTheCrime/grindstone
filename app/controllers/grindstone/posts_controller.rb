@@ -1,24 +1,24 @@
 class Grindstone::PostsController < ApplicationController
   before_action :set_post, only: [:show]
+
   POST = Grindstone::Post
 
-  # GET /posts
   def index
-    @posts = POST.all
+    post_count = params[:post_count] || 10
+    begin
+      @posts = Grindstone::Post.paginate(:page => params[:page],
+        :per_page => post_count)
+    rescue NoMethodError
+      @posts = POST.all
+    end
   end
 
-  # GET /posts/1
   def show
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_post
       @post = POST.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    def post_params
-      params[:post]
     end
 end

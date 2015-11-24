@@ -1,9 +1,10 @@
 PATH
   remote: .
   specs:
-    grindstone (0.0.1)
+    grindstone (0.0.2)
       rails (~> 4.2.4)
       rails_admin (= 0.7.0)
+      will_paginate (= 3.0.7)
 
 GEM
   remote: https://rubygems.org/
@@ -147,6 +148,7 @@ GEM
     tilt (2.0.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    will_paginate (3.0.7)
 
 PLATFORMS
   ruby
@@ -155,6 +157,7 @@ DEPENDENCIES
   grindstone!
   rails_admin (= 0.7.0)
   sqlite3
+  will_paginate (= 3.0.7)
 
 BUNDLED WITH
    1.10.6

@@ -23,3 +23,5 @@ Just run the following in your application:
 rails g rails_admin:install
 ```
 and then follow the steps here: [Rails Admin/CanCanCan](https://github.com/sferik/rails_admin/wiki/Cancancan)
+
+If you want to paginate, just add the following to your gemfile

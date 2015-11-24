@@ -13,6 +13,9 @@
             <div><%= post.body %></div>
             <%= link_to 'Show', post %>
         <% end %>
+
+        <%= will_paginate @posts, :page_links => false %>
+
         <footer><%= Grindstone.config.blog_footer %></footer>
     </body>
 </html>
