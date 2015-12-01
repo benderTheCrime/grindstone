@@ -13,3 +13,6 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+
+gem 'rails_admin', '0.7.0'
+gem 'will_paginate', '3.0.7'

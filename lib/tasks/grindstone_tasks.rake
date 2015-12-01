@@ -1,20 +1,31 @@
+require 'fileutils'
+
 namespace :grindstone do
   desc "Create Grindstone migrations"
   task :create_migrations do
 
     # Get the Grindstone dir
-    spec = Gem::Specification.find_by_name('grindstone')
+    spec = Gem::Specification.find_by_name 'grindstone'
 
-    # Set the source and destination
-    src_path = "#{spec.gem_dir}/db/migrate/20090106022023_create_posts.rb"
+    # Set the destination
     dest_dir = "#{Rails.root}/db/migrate"
-    dest_path = "#{dest_dir}/#{Time.now.utc.strftime("%Y%m%d%H%M%S")}_create_posts.rb"
 
-    # Make sure the destination exists
-    FileUtils.mkdir_p dest_dir
-    File.new(dest_path, 'w').close
+    unless File.directory?(dest_dir)
+      FileUtils.mkdir_p(dest_dir)
+    end
 
-    # Copy the file
-    FileUtils::cp src_path, dest_path, :verbose => true
+    # Read the source
+    Dir.glob("#{spec.gem_dir}/db/migrate/*.rb").each do |migration|
+      filename = migration.split('/').last
+      filepath = "#{dest_dir}/#{filename}"
+
+      puts migration, filepath
+
+      # Copy the file
+      File.open(filepath, 'w')
+      FileUtils::cp migration, filepath, :verbose => true
+    end
+
+    puts 'Grindstone: Copied Migrations'
   end
 end

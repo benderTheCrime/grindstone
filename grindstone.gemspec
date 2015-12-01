@@ -10,14 +10,16 @@ Gem::Specification.new do |s|
   s.authors     = ["jgrosecl49"]
   s.email       = ["joe.groseclose@ordergroove.com"]
   # s.homepage    = ""
-  s.summary     = "Summary of Grindstone."
-  s.description = "Description of Grindstone."
+  s.summary     = "Blog scaffolding gem"
+  s.description = "Build a custom blog in seconds!"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.2.4"
+  s.add_dependency 'rails', '~> 4.2.4'
+  s.add_dependency 'rails_admin', '0.7.0'
+  s.add_dependency 'will_paginate', '3.0.7'
 
   s.add_development_dependency "sqlite3"
 end

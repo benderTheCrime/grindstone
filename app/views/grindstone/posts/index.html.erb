@@ -1,25 +1,23 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= render "grindstone/posts/partials/head" %>
+    </head>
+    <body>
+        <div class="site-container row">
+            <h1><%= Grindstone.config.blog_title %></h1>
+            <h4><%= Grindstone.config.blog_description %></h4>
+            <% @posts.each do |post| %>
+                <h2><%= post.title %></h2>
+                <h3><%= post.grindstone_author.name %></h3>
+                <i><%= post.created_at %></i>
+                <div><%= post.body %></div>
+                <%= link_to 'Show', post %>
+            <% end %>
 
-<h1>Listing Posts</h1>
+            <%= will_paginate @posts, :page_links => false %>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+            <footer><%= Grindstone.config.blog_footer %></footer>
+        </div>
+    </body>
+</html>

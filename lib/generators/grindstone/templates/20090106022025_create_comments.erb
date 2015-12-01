@@ -1,0 +1,13 @@
+class CreateComments < ActiveRecord::Migration
+  def change
+    create_table :grindstone_comments do |t|
+      t.string      :title
+      t.string      :username
+      t.text        :body
+
+      t.timestamps  null: true
+    end
+    add_column :grindstone_comments, :grindstone_post_id, :integer
+    add_foreign_key :grindstone_comments, :grindstone_posts
+  end
+end
