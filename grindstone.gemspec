@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["jgrosecl49"]
   s.email       = ["joe.groseclose@ordergroove.com"]
   # s.homepage    = ""
-  s.summary     = "Summary of Grindstone."
-  s.description = "Description of Grindstone."
+  s.summary     = "Blog scaffolding gem"
+  s.description = "Build a custom blog in seconds!"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
