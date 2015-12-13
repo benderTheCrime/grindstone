@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <%= render "grindstone/posts/partials/head" %>
-    </head>
-    <body>
-        <div class="site-container row">
-            <h1><%= Grindstone.config.blog_title %></h1>
-            <h2><%= @post.title %></h2>
-            <h3><%= @post.grindstone_author.name %></h3>
-            <i><%= @post.created_at %></i>
-            <div><%= @post.body %></div>
-            <!-- <%= render "grindstone/posts/partials/comments" %> -->
-            <%= link_to 'Back', posts_path %>
+<div class="grindstone-container">
+    <div class="grindstone-header">
+        <h1><%= Grindstone.config.blog_title %></h1>
 
-            <footer><%= Grindstone.config.blog_footer %></footer>
-        </div>
-    </body>
-</html>
+    </div>
+
+    <div class="grinstone-post">
+        <h2><%= @post.title %></h2>
+        <h3><%= @post.grindstone_author.name %></h3>
+        <i><%= @post.created_at %></i>
+        <div><%= @post.body %></div>
+        <!-- <%= render "grindstone/posts/partials/comments" %> -->
+        <%= link_to 'Back', posts_path %>
+    </div>
+
+    <footer class="grindstone-footer">
+        <%= Grindstone.config.blog_footer %>
+    </footer>
+</div>

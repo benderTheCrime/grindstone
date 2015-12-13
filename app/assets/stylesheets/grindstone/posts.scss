@@ -1,0 +1,17 @@
+@import 'mixins';
+
+.grindstone-container {
+    @include dim(100%, 100%);
+}
+
+.grindstone-header {
+    padding:30px 0;
+}
+
+.grindstone-post {
+    margin-bottom:25px;
+}
+
+.grindstone-footer {
+    padding-bottom:20px;
+}
