@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.name        = "grindstone"
   s.version     = Grindstone::VERSION
   s.authors     = ["jgrosecl49"]
-  s.email       = ["joe.groseclose@ordergroove.com"]
-  # s.homepage    = ""
+  s.email       = ["joe.groseclose@gmail.com"]
+  s.homepage    = "https://rubygems.org/gems/grindstone"
   s.summary     = "Blog scaffolding gem"
   s.description = "Build a custom blog in seconds!"
   s.license     = "MIT"
